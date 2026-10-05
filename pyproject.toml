@@ -14,10 +14,14 @@ dependencies = ["numpy", "pandas", "scipy"]
 
 [project.optional-dependencies]
 geo = ["geopandas", "shapely", "rasterio"]
+utils = ["geopandas", "shapely", "scipy", "pyproj", "simplekml", "matplotlib", "tqdm"]
 dev = ["pytest"]
 
 [project.scripts]
 vm0047-pb = "vm0047_pb.cli:main"
+vm0047-kml2shp = "vm0047_pb.utils.kml_to_shp:main"
+vm0047-gps2kml = "vm0047_pb.utils.gps_to_kml:main"
+vm0047-gpsshapes = "vm0047_pb.utils.gps_shapes:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

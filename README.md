@@ -43,6 +43,12 @@ print(benchmark_over_time(series))       # PB per monitoring year
 CLI: `vm0047-pb match --project p.csv --control c.csv --covariates SI_t-8 SI_t-4 SI_t0 -k 5`
 then `vm0047-pb benchmark --project-si ... --control-si ... --matches out/matches.csv`.
 
+## Data-preparation utilities
+
+`src/vm0047_pb/utils/` has KML to Shapefile conversion with geometry repair and GPS track to KML/polygon helpers
+(`vm0047-kml2shp`, `vm0047-gps2kml`, `vm0047-gpsshapes`). Details: [src/vm0047_pb/utils/README.md](src/vm0047_pb/utils/README.md).
+Install with `pip install -e ".[utils]"`.
+
 ## Stocking index
 
 The methodology expects SI from a Verra-vetted data service provider or an equivalent dataset
