@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vm0047-pb"
+version = "0.1.0"
+description = "Open-source implementation of the VM0047 (Verra ARR) dynamic performance benchmark: plot sampling, donor pool, control-plot matching, and benchmark calculation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Aryan Kumar" }]
+dependencies = ["numpy", "pandas", "scipy"]
+
+[project.optional-dependencies]
+geo = ["geopandas", "shapely", "rasterio"]
+dev = ["pytest"]
+
+[project.scripts]
+vm0047-pb = "vm0047_pb.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

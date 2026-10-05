@@ -1,0 +1,23 @@
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+# data and secrets must never be committed
+*.tif
+*.tiff
+*.jp2
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.kml
+*.kmz
+*.qgz
+*.xlsx
+credentials.json
+token.*
+*.pkl
+*.pickle
+.env
+out/
